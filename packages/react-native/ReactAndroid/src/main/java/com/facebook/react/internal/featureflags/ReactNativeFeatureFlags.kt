@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<c9be40b9d016463d1531057598a6aa88>>
+ * @generated SignedSource<<bb2f6e382818453ab0290579f34670fd>>
  */
 
 /**
@@ -407,6 +407,12 @@ public object ReactNativeFeatureFlags {
    */
   @JvmStatic
   public fun hideOffscreenVirtualViewsOnIOS(): Boolean = accessor.hideOffscreenVirtualViewsOnIOS()
+
+  /**
+   * When enabled, uses optimized platform-specific paths to apply animated props synchronously. On Android, this uses a batched int/double buffer protocol with a single JNI call. On iOS, this passes AnimatedProps directly through the delegate chain and applies them via cloneProps, avoiding the folly::dynamic round-trip.
+   */
+  @JvmStatic
+  public fun optimizedAnimatedPropUpdates(): Boolean = accessor.optimizedAnimatedPropUpdates()
 
   /**
    * Override props at mounting with synchronously mounted (i.e. direct manipulation) props from Native Animated.

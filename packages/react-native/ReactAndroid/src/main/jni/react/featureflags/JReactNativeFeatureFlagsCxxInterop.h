@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<f1db4e44d0b5d3daa11aec0e6a83e09f>>
+ * @generated SignedSource<<be1c62b8fa507a337f7b100bc8f3de14>>
  */
 
 /**
@@ -217,6 +217,9 @@ class JReactNativeFeatureFlagsCxxInterop
     facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop>);
 
   static bool hideOffscreenVirtualViewsOnIOS(
+    facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop>);
+
+  static bool optimizedAnimatedPropUpdates(
     facebook::jni::alias_ref<JReactNativeFeatureFlagsCxxInterop>);
 
   static bool overrideBySynchronousMountPropsAtMountingAndroid(
