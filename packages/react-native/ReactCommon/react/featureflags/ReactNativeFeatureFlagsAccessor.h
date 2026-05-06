@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<17621e5f711352812633c125b7858537>>
+ * @generated SignedSource<<571c0a7b75f6177a49be8bfa0d3c20b8>>
  */
 
 /**
@@ -96,6 +96,7 @@ class ReactNativeFeatureFlagsAccessor {
   bool fuseboxNetworkInspectionEnabled();
   bool fuseboxScreenshotCaptureEnabled();
   bool hideOffscreenVirtualViewsOnIOS();
+  bool optimizedAnimatedPropUpdates();
   bool overrideBySynchronousMountPropsAtMountingAndroid();
   bool perfIssuesEnabled();
   bool perfMonitorV2Enabled();
@@ -135,7 +136,7 @@ class ReactNativeFeatureFlagsAccessor {
   std::unique_ptr<ReactNativeFeatureFlagsProvider> currentProvider_;
   bool wasOverridden_;
 
-  std::array<std::atomic<const char*>, 92> accessedFeatureFlags_;
+  std::array<std::atomic<const char*>, 93> accessedFeatureFlags_;
 
   std::atomic<std::optional<bool>> commonTestFlag_;
   std::atomic<std::optional<bool>> cdpInteractionMetricsEnabled_;
@@ -201,6 +202,7 @@ class ReactNativeFeatureFlagsAccessor {
   std::atomic<std::optional<bool>> fuseboxNetworkInspectionEnabled_;
   std::atomic<std::optional<bool>> fuseboxScreenshotCaptureEnabled_;
   std::atomic<std::optional<bool>> hideOffscreenVirtualViewsOnIOS_;
+  std::atomic<std::optional<bool>> optimizedAnimatedPropUpdates_;
   std::atomic<std::optional<bool>> overrideBySynchronousMountPropsAtMountingAndroid_;
   std::atomic<std::optional<bool>> perfIssuesEnabled_;
   std::atomic<std::optional<bool>> perfMonitorV2Enabled_;

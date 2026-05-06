@@ -4,7 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  *
- * @generated SignedSource<<23e79788b0820f61ba95288412367247>>
+ * @generated SignedSource<<538991d0d4eb7f79cbf8be382ea5bf95>>
  */
 
 /**
@@ -619,6 +619,15 @@ class ReactNativeFeatureFlagsDynamicProvider : public ReactNativeFeatureFlagsDef
     }
 
     return ReactNativeFeatureFlagsDefaults::hideOffscreenVirtualViewsOnIOS();
+  }
+
+  bool optimizedAnimatedPropUpdates() override {
+    auto value = values_["optimizedAnimatedPropUpdates"];
+    if (!value.isNull()) {
+      return value.getBool();
+    }
+
+    return ReactNativeFeatureFlagsDefaults::optimizedAnimatedPropUpdates();
   }
 
   bool overrideBySynchronousMountPropsAtMountingAndroid() override {
