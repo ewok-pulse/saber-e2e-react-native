@@ -6,7 +6,6 @@
  */
 
 import com.android.build.gradle.internal.tasks.factory.dependsOn
-import com.facebook.react.internal.PrivateReactExtension
 import com.facebook.react.tasks.internal.*
 import com.facebook.react.tasks.internal.utils.*
 import de.undercouch.gradle.tasks.download.Download
@@ -15,9 +14,6 @@ plugins {
   id("com.facebook.react")
   alias(libs.plugins.download)
 }
-
-val hermesV1Enabled =
-    rootProject.extensions.getByType(PrivateReactExtension::class.java).hermesV1Enabled.get()
 
 // This is the version of CMake we're requesting to the Android SDK to use.
 // If missing it will be downloaded automatically. Only CMake versions shipped with the
@@ -202,10 +198,6 @@ val configureFantomTester by
               "-DREACT_THIRD_PARTY_NDK_DIR=$reactAndroidBuildDir/third-party-ndk",
               "-DRN_ENABLE_DEBUG_STRING_CONVERTIBLE=ON",
           )
-
-      if (hermesV1Enabled) {
-        cmdArgs.add("-DHERMES_V1_ENABLED=1")
-      }
 
       commandLine(cmdArgs)
       standardOutputFile.set(project.file("$buildDir/reports/configure-fantom_tester.log"))
